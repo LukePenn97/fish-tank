@@ -8,7 +8,7 @@ Some work students could do:
     * add a bunch of new fisheses?
     * SimpleFish
     * BiteFish
-  * maybe having fish produce fish-seeds is a good student exercise
+  * maybe having fish produce fish-seeds (EGGS???????) is a good student exercise
   * refactor methods to be better encapsulated
     * better use of properties and methods?
     * just smaller methods?
@@ -23,7 +23,7 @@ to do by copy-pasting without understanding.  I agree that that concern is real.
 Desired features:
   * Seeds should be able to go above the top of the tank without despawning, so they can fall back in
   * Fish should change direction to face correctly
-  * Seeds should have a timer; if they're unhatched (and still alive) when the timer ends, they hatch naturally
+  * Seeds (EGGS???) should have a timer; if they're unhatched (and still alive) when the timer ends, they hatch naturally
 
 * If I do denizen.findDenizensWithinRadius(r), they can do the BiteFish?
   * and/or do another simpleFish, possibly as a warmup to doing the BiteFish

@@ -27,7 +27,7 @@ class Denizen {
   update(t) {
     // if you're out of bounds, despawn
     if (this.outOfBounds(this.tank.getBounds())) {
-      this.kill();
+      this.stayInside(this.tank.getBounds());
     } else {
       for (var i = 0; i < this.calcPhysicsTicks(t); i++) {
         this.updateOneTick();
@@ -60,7 +60,15 @@ class Denizen {
     // console.log("like tears, in rain.  time to die.", this);
     this.tank.removeDenizen(this.id, duration);
   }
-
+  stayInside(bounds) {
+    if (this.position.x + 5 * this.width < bounds.minX || this.position.x - 5 * this.width > bounds.maxX) {
+      this.velocity.x = -this.velocity.x;
+    }
+    
+    if (this.position.y + 5 * this.height < bounds.minY || this.position.y - 5 * this.height > bounds.maxY) {
+      this.velocity.y = -this.velocity.y;
+    }
+  }
   outOfBounds(bounds) {
     // TODO: it'd be cool if Seeds could go above the top fo the tank, then fall back down
     return (

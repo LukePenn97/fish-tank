@@ -15,6 +15,9 @@ class GoFish extends Fish {
       this.makeNewVelocity();
     }
     this.surgeSecondsLeft = Math.max(0, this.surgeSecondsLeft - PHYSICS_TICK_SIZE_S);
+    this.stayInside();
+    this.checkIfEaten();
+    this.checkIfMate();
   }
 
 

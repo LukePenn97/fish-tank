@@ -18,6 +18,7 @@ class Fishtank {
   getRandomSpecies() {
     var specieses = Object.values(this.specieses);
     var index = randRangeInt(specieses.length - 1);
+    //alert(specieses[index]);
     return specieses[index];
   }
 
